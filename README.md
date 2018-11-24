@@ -10,4 +10,5 @@ Simple Sinatra weather app utilizing the [Openweather API](https://openweatherma
 ## To Do
 
 * ~~Add README~~
-* Add error handling in search terms
+* Add error handling for invalid search terms
+* Add autocomplete to search bar
