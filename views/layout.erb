@@ -15,9 +15,6 @@
         <div class="col-8">
           <br></br>
           <h1>Check the Weather</h1>
-          <br></br>
-          <%=yield%>
-          <br></br>
           <form class="form" autocomplete="off" action="/query_by_city" method="post">
             <div class="form-group row">
               <div class="col"></div>
@@ -29,6 +26,9 @@
             </div>
             <button type="submit" class="btn btn-primary mb-2">Get Forecast</button>
           </form>
+          <br></br>
+          <%=yield%>
+          <br></br>
         </div>
         <div class="col-2">
         </div>

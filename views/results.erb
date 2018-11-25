@@ -1,3 +1,10 @@
 <% if @output[:temp] %>
-  <p><%= "#{@output[:city_and_country]}: #{@output[:temp]}, #{@output[:wind_speed]}, #{@output[:forecast_descr]}"%></p>
+  <p><%="#{@output[:city_and_country]} | #{@output[:temp]} | #{@output[:wind_speed]} | #{@output[:forecast_descr]}"%></p>
 <% end %>
+<br></br>
+<iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src=<%="https://www.google.com/maps/embed/v1/view?key=#{ENV.fetch('GOOGLE_MAPS_API_KEY')}&center=#{@coordinates}&zoom=12"%> allowfullscreen>
+</iframe>

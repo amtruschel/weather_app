@@ -18,15 +18,17 @@ post '/query_by_city' do
   city = params[:query].gsub(', ',',')
 
   begin
-    response = JSON.parse(WeatherQuery.query_by_city(city))
+    weather_response = JSON.parse(WeatherQuery.query_by_city(city))
   rescue RestClient::ExceptionWithResponse => err
     redirect '/city_not_found'
   end
 
-  temp = "#{response['main']['temp'].round(0)}°F"
-  forecast_descr = response['weather'][0]['description']
-  wind_speed = "#{response['wind']['speed'].round(0)} mph winds"
-  city_and_country = "#{response['name']}, #{response['sys']['country']}"
+  @coordinates = "#{weather_response['coord']['lat']},#{weather_response['coord']['lon']}"
+  temp = "#{weather_response['main']['temp'].round(0)}°F"
+  forecast_descr = weather_response['weather'][0]['description']
+  wind_speed = "#{weather_response['wind']['speed'].round(0)} mph winds"
+  city_and_country = "#{weather_response['name']}, #{weather_response['sys']['country']}"
   @output = {'temp': temp,'forecast_descr': forecast_descr,'wind_speed': wind_speed, 'city_and_country': city_and_country}
+
   erb :results
 end
