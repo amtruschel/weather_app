@@ -12,4 +12,4 @@ Simple Sinatra weather app utilizing the [Openweather API](https://openweatherma
 * ~~Add README~~
 * ~~Add error handling for invalid search terms~~
 * Add autocomplete to search bar
-* Add Google Maps integration
+* ~~Add Google Maps integration~~
