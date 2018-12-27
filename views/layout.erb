@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <title>Check the Weather</title>
   </head>
   <body>
@@ -15,12 +18,12 @@
         <div class="col-8">
           <br></br>
           <h1>Check the Weather</h1>
-          <form class="form" autocomplete="off" action="/query_by_city" method="post">
+          <form class="form" action="/query_by_city" method="post">
             <div class="form-group row">
               <div class="col"></div>
               <div class="col-xs-2 autocomplete">
                 <label for="city" class="sr-only">City</label>
-                <input type="text" class="form-control" name= "query" id="query" placeholder="ex. Boston,US">
+                <input type="text" class="form-control" name="query" id="query" placeholder="ex. Boston,US" value="<%=session[:query_string]%>">
               </div>
               <div class="col"></div>
             </div>

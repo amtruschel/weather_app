@@ -1,5 +1,5 @@
-<% if @output[:temp] %>
-  <p><%="#{@output[:city_and_country]} | #{@output[:temp]} | #{@output[:wind_speed]} | #{@output[:forecast_descr]}"%></p>
+<% if @forecast[:temp] %>
+  <p><%="#{@forecast[:city_and_country]} | #{@forecast[:temp]} | #{@forecast[:wind_speed]} | #{@forecast[:forecast_descr]}"%></p>
 <% end %>
 <br></br>
 <iframe
