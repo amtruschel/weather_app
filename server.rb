@@ -37,7 +37,7 @@ post '/query_by_city' do
 
   begin
     weather_response = JSON.parse(WeatherQuery.query_by_city(city))
-  rescue RestClient::ExceptionWithResponse => err
+  rescue RestClient::ExceptionWithResponse
     redirect '/city_not_found'
   end
 
