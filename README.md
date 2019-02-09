@@ -5,6 +5,8 @@ Simple Sinatra weather app utilizing the [Openweather API](https://openweatherma
 ## Overview
 
 * Search returns current temperature (in Fahrenheit), wind speed, and description of weather conditions
+
+## Usage
 * Search bar accepts a combination of city name and two character country code, e.g. 'New York,US'
 
 ## To Do
