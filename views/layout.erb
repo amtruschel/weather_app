@@ -31,6 +31,15 @@
           </form>
           <br></br>
           <%=yield%>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              class="embed-responsive-item"
+              width="600"
+              height="450"
+              frameborder="0" style="border:0"
+              src=<%="https://www.google.com/maps/embed/v1/view?key=#{ENV.fetch('GOOGLE_MAPS_API_KEY')}&center=#{@coordinates || '42.36,-71.06'}&zoom=12"%> allowfullscreen>
+            </iframe>
+          </div>
           <br></br>
         </div>
         <div class="col-2">

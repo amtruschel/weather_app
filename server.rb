@@ -17,6 +17,7 @@ end
 
 get '/' do
   clear_session_data
+  @coordinates = nil
   erb :index
 end
 
